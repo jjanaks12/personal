@@ -32,7 +32,13 @@ class ContactController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255|min:6'
             ]);
-        return "form SUbmitted!!";
+
+        $contact = new Contact;
+        $contact->name = $request->name;
+        $contact->description = $request->description;
+        $contact->save();
+
+        return redirect('contact');
     }
 
     /**

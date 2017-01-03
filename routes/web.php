@@ -13,6 +13,6 @@
 
 Route::get('/', 'Auth\LoginController@ShowLoginForm');
 Route::get('/home', 'PagesController@getHome');
-Route::resource('contact', 'ContactController');
+Route::resource('contact', 'ContactController', ['except' => 'create']);
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();

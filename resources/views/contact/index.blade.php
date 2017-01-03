@@ -19,6 +19,24 @@
 			{{ Form::label('name', 'Full Name:') }}
 			{{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Type your Full Name...']) }}
 		</div>
+		<div class="row">
+			<input type="hidden" name="count" value="1" />
+			<div class="control-group" id="fields">
+				<label class="control-label" for="field1">Nice Multiple Form Fields</label>
+				<div class="controls" id="profs">
+					<div id="field">
+						<div class="input-group">
+							<input autocomplete="off" class="input form-control" id="field1" name="prof1" type="text" placeholder="Type something" data-items="8"/>
+							<div class="input-group-btn">
+								<button id="b1" class="btn add-more" type="button">+</button>
+							</div>
+						</div>
+					</div>
+					<br>
+					<small>Press + to add another form field :)</small>
+				</div>
+			</div>
+		</div>
 		<div class="form-group">
 			{{ Form::label('description', 'Full Details:') }}
 			{{ Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Enter Full description']) }}
